@@ -37,7 +37,7 @@ class Student
 def self.create(attributes)
     student = Student.new
     attributes.each{|key, value|
-      student.send(("#{key}="), value)
+      student.send(("#{key}="), value)  #.send calles on a method attribute
     }
     student.save
     student 
